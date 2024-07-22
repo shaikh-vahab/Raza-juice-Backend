@@ -8,6 +8,6 @@ RazaRouter.post('/Juices', Juice)
 RazaRouter.get('/Juices', getJuices)
 RazaRouter.post('/DryFruit', DryFruites)
 RazaRouter.get('/DryFruit', getDryFruites)
-
+RazaRouter.patch("/")
 
 export default RazaRouter
