@@ -13,7 +13,7 @@ const DryFruitsSchema = mongoose.Schema({
     Quantity: { type: String, required: true },
     Price: { type: String, required: true }
 
-})
+});
 
 const JuiceModel = mongoose.model('Juices', JuiceSchema);
 const DryFruitModel = mongoose.model('Dryfruit', DryFruitsSchema);

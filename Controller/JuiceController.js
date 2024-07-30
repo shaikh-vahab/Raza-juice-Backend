@@ -56,7 +56,7 @@ const DryFruites = async (req, res) => {
 }
 
 
-const getDryFruites = async (req, res) => {
+const getDryFruites = async (req,res) => {
     try {
         const Dryfruit = await DryFruitModel.find();
         res.status(200).json(Dryfruit);
