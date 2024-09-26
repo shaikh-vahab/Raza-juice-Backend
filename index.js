@@ -17,7 +17,7 @@ mongoose.connect(databaseUrl).then((result) =>
 })
 
 app.use(express.json())
-// app.use('/  ', RazaRouter)
+app.use('/Raza', RazaRouter)
 
 
 app.listen(port, () => {
