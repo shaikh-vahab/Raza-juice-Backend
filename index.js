@@ -9,14 +9,14 @@ const app = express();
 const port = process.env.PORT;
 const databaseUrl = process.env.DATABASEURL
 
-
+ 
 mongoose.connect(databaseUrl).then((result) =>
-    console.log('Connected To Database Success')
+    console.log('Connected To Database Successfully')
 ).catch((err) => {
     console.log('Error Occured Connect Databse Time')
 })
 
-app.use(express.json())
+app.use(express.json());
 app.use('/Raza', RazaRouter)
 
 

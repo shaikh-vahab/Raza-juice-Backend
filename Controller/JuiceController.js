@@ -1,7 +1,7 @@
 import { DryFruitModel, JuiceModel } from "../Model/JuiceModel.js";
 
 const get = (req, res) => {
-    res.send('Hello world .......... !');
+    res.send('Raza-Juice-Center');
 };
 
 const Juice = async (req, res) => {
@@ -13,7 +13,7 @@ const Juice = async (req, res) => {
 
     const newJuice = new JuiceModel({ Image, JuiceName, Price, Quantity });
     try {
-        const savedJuice = await newJuice.save();
+        const savedJuice = await newJuice.save(); 
         res.status(201).json(savedJuice);
         console.log(savedJuice)
     } catch (error) {
@@ -25,6 +25,7 @@ const Juice = async (req, res) => {
 const getJuices = async (req, res) => {
     try {
         const Juice = await JuiceModel.find();
+        // console.log(Juice)
         res.status(200).json(Juice);
     } catch (err) {
         res.status(500).json({ msg: 'Server error' });
