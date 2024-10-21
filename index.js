@@ -1,5 +1,6 @@
 import express from "express"
 import dotenv from 'dotenv'
+import compression from "compression";
 import RazaRouter from "./Routers/RazaRoute.js";
 import mongoose from "mongoose";
 
@@ -16,6 +17,7 @@ mongoose.connect(databaseUrl).then((result) =>
     console.log('Error Occured Connect Databse Time')
 })
 
+app.use(compression())
 app.use(express.json());
 app.use('/Raza', RazaRouter)
 
